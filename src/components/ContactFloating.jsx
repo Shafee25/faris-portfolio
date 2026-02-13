@@ -1,28 +1,33 @@
 import React from 'react';
-import { Phone, Mail, Linkedin } from 'lucide-react';
+import { Phone, Mail, FileText, Send } from 'lucide-react';
 
 const ContactFloating = () => {
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-md">
-      <div className="bg-white text-black p-4 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-between">
-        <div className="flex items-center gap-3 pl-2">
-          <div className="w-10 h-10 bg-darkBg rounded-full flex items-center justify-center text-white">
-            <Phone size={18} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-widest opacity-50">Quick Connect</p>
-            <p className="text-xs font-black">+94 75 5841 123</p>
-          </div>
-        </div>
+    <div className="fixed bottom-6 left-0 w-full z-[100] px-6">
+      <div className="max-w-md mx-auto bg-white/10 backdrop-blur-3xl border border-white/20 p-2 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-between">
         
-        <div className="flex gap-2">
-          <a href="mailto:adsmsfaris@gmail.com" className="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center hover:bg-accentBlue transition-colors">
-            <Mail size={20} />
-          </a>
-          <a href="#" className="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center hover:bg-accentBlue transition-colors">
-            <Linkedin size={20} />
-          </a>
-        </div>
+        {/* Phone Call */}
+        <a href="tel:+94755841123" className="flex-1 flex flex-col items-center gap-1 py-2 text-white/50 hover:text-accentBlue transition-colors">
+          <Phone size={20} />
+          <span className="text-[8px] font-black uppercase">Call</span>
+        </a>
+
+        {/* CV Download (Mobile Quick Access) */}
+        <a href="/Farees-CV.pdf" download className="flex-1 flex flex-col items-center gap-1 py-2 text-white/50 hover:text-accentBlue transition-colors border-x border-white/10">
+          <FileText size={20} />
+          <span className="text-[8px] font-black uppercase">Resume</span>
+        </a>
+
+        {/* Message / WhatsApp */}
+        <a href="#contact" className="flex-1 flex flex-col items-center gap-1 py-2 text-white/50 hover:text-accentBlue transition-colors">
+          <Send size={20} />
+          <span className="text-[8px] font-black uppercase">Enquire</span>
+        </a>
+
+        {/* Primary Action Button */}
+        <a href="mailto:adsmsfaris@gmail.com" className="bg-accentBlue text-black h-12 w-12 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+          <Mail size={22} strokeWidth={3} />
+        </a>
       </div>
     </div>
   );
