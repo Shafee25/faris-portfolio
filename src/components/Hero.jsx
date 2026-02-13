@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     // Added id="hero" here for Navbar linking
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 px-6 md:px-20 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-40 md:pt-48 px-6 md:px-20 overflow-hidden">
       <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.02] whitespace-nowrap pointer-events-none uppercase">
         {DATA.profile.firstName}
       </h1>
