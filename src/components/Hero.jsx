@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Download, ChevronRight, Phone } from 'lucide-react';
+import { Download, ChevronRight } from 'lucide-react';
 import { DATA } from '../constants';
-import dadImg from '../../public/1.png'; // Make sure the image is here!
+import dadImg from '../../public/Prof.png';
 
 const Hero = () => {
   const buttonRef = useRef(null);
@@ -32,8 +32,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 px-6 md:px-20 overflow-hidden">
-      {/* Background Large Text */}
+    // Added id="hero" here for Navbar linking
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 px-6 md:px-20 overflow-hidden">
       <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.02] whitespace-nowrap pointer-events-none uppercase">
         {DATA.profile.firstName}
       </h1>
@@ -58,21 +58,22 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-6 justify-center lg:justify-start items-center">
-            <button 
+            {/* Download Link Setup */}
+            <a 
+              href="/Farees-CV.pdf" 
+              download="Seyed_Ahamed_Farees_CV.pdf"
               ref={buttonRef}
-              className="group relative bg-accentBlue text-black px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-[0_20px_40px_rgba(0,210,255,0.2)]"
+              className="group relative bg-accentBlue text-black px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-[0_20px_40px_rgba(0,210,255,0.2)] flex items-center gap-2"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                Download CV <Download size={18} />
-              </span>
-            </button>
+              Download CV <Download size={18} />
+            </a>
+            
             <a href="#experience" className="flex items-center gap-2 text-xs font-black uppercase tracking-widest hover:text-accentBlue transition-colors group">
               View Journey <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
 
-        {/* GOAT Image Container */}
         <div className="relative justify-self-center lg:justify-self-end group">
           <div className="w-72 h-[400px] md:w-[420px] md:h-[580px] rounded-[3rem] border border-white/10 bg-cardBg/40 backdrop-blur-3xl p-3 -rotate-2 group-hover:rotate-0 group-hover:scale-[1.02] transition-all duration-700">
             <div className="w-full h-full rounded-[2.5rem] bg-darkBg overflow-hidden relative">
@@ -84,7 +85,6 @@ const Hero = () => {
                <div className="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80"></div>
             </div>
           </div>
-          {/* Background Glow */}
           <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accentBlue/20 blur-[120px] rounded-full"></div>
         </div>
       </div>
