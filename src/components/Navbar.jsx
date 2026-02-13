@@ -11,9 +11,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'py-1' : 'py-2 md:py-4'}`}>
+    // Changed py-6 md:py-8 TO py-2 md:py-3 to pull it closer to the top
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'py-1' : 'py-2 md:py-3'}`}>
       <div className={`max-w-7xl mx-auto px-4 md:px-10 transition-all duration-500`}>
-        <div className={`flex justify-between items-center bg-cardBg/60 backdrop-blur-2xl border border-white/10 px-5 md:px-8 py-3 md:py-4 rounded-full shadow-2xl transition-all ${scrolled ? 'scale-95 md:scale-100 shadow-accentBlue/5' : ''}`}>
+        {/* Adjusted py-3 md:py-4 TO py-2 md:py-3 for a slimmer pill height */}
+        <div className={`flex justify-between items-center bg-cardBg/60 backdrop-blur-2xl border border-white/10 px-5 md:px-8 py-2 md:py-3 rounded-full shadow-2xl transition-all ${scrolled ? 'scale-95 md:scale-100 shadow-accentBlue/5' : ''}`}>
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 group cursor-pointer">
