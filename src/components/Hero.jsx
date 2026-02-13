@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Download, ChevronRight } from 'lucide-react';
 import { DATA } from '../constants';
-import dadImg from '../assets/dad.png';
+import dadImg from '../../public/Prof.png';
 
 const Hero = () => {
   const buttonRef = useRef(null);
