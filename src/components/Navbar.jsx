@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center bg-cardBg/40 backdrop-blur-xl border border-white/10 px-8 py-4 rounded-full shadow-2xl">
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-10 h-10 bg-accentBlue rounded-xl flex items-center justify-center font-black text-black text-xl shadow-[0_0_20px_rgba(0,210,255,0.3)] group-hover:rotate-12 transition-transform">F</div>
-          <span className="text-xl font-black tracking-tighter text-white">FAREES</span>
+          <span className="text-xl font-black tracking-tighter text-white">AHAMED FAREES</span>
         </div>
         
         <div className="hidden md:flex gap-10 text-xs font-bold uppercase tracking-[0.2em] text-textGray">
